@@ -11,7 +11,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.builtin.cmp.completion = { completion = { completeopt = 'menu,menuone, noinsert'} }
 vim.opt.showtabline = 0
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "solarized"
 
 
 local options = {
@@ -24,7 +24,7 @@ local options = {
   hlsearch = true,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
   mouse = "a",                             -- allow the mouse to be used in neovim
-  pumheight = 10,                          -- pop up menu height
+  pumheight = 0,                          -- pop up menu height
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
   showtabline = 0,                         -- always show tabs
   smartcase = true,                        -- smart case

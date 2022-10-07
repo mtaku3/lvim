@@ -19,7 +19,7 @@ lvim.plugins = {
 	"mattn/webapi-vim",
 	"folke/zen-mode.nvim",
 	"lvimuser/lsp-inlayhints.nvim",
-	"lunarvim/darkplus.nvim",
+	-- "lunarvim/darkplus.nvim",
 	"lunarvim/templeos.nvim",
 	"kevinhwang91/nvim-bqf",
 	"is0n/jaq-nvim",
@@ -29,7 +29,7 @@ lvim.plugins = {
 		"0x100101/lab.nvim",
 		run = "cd js && npm ci",
 	},
-	{ "tzachar/cmp-tabnine", run = "./install.sh" },
+	-- { "tzachar/cmp-tabnine", run = "./install.sh" },
 	{
 		"zbirenbaum/copilot.lua",
 		event = { "VimEnter" },
@@ -46,6 +46,7 @@ lvim.plugins = {
 			require("copilot_cmp").setup()
 		end,
 	},
+	"shaunsingh/solarized.nvim",
 
 	-- https://github.com/jose-elias-alvarez/typescript.nvim
 	-- "rmagatti/auto-session",
