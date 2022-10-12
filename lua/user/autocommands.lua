@@ -47,8 +47,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     if buf_ft == "" or buf_ft == nil then
       vim.cmd [[
       nnoremap <silent> <buffer> q :close<CR> 
-      nnoremap <silent> <buffer> <c-j> j<CR> 
-      nnoremap <silent> <buffer> <c-k> k<CR> 
+      " nnoremap <silent> <buffer> <c-j> j<CR> 
+      " nnoremap <silent> <buffer> <c-k> k<CR> 
       set nobuflisted 
     ]]
     end
@@ -83,6 +83,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "NeogitCommitMessage" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+    vim.cmd "startinsert!"
   end,
 })
 

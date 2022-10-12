@@ -1,5 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
+  "nvim-treesitter/playground",
+  "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "karb94/neoscroll.nvim",
   "j-hui/fidget.nvim",
@@ -25,6 +27,32 @@ lvim.plugins = {
   "ggandor/leap.nvim",
   "nacro90/numb.nvim",
   "TimUntersberger/neogit",
+  "sindrets/diffview.nvim",
+  "simrat39/rust-tools.nvim",
+  "olexsmir/gopher.nvim",
+  "leoluz/nvim-dap-go",
+  "mfussenegger/nvim-dap-python",
+  {
+    "saecki/crates.nvim",
+    tag = "v0.3.0",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup {
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
+      }
+    end,
+  },
+  {
+    "jinh0/eyeliner.nvim",
+    config = function()
+      require("eyeliner").setup {
+        highlight_on_key = true,
+      }
+    end,
+  },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
   "monaqa/dial.nvim",
   {
@@ -37,7 +65,9 @@ lvim.plugins = {
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
-        require("copilot").setup()
+        require("copilot").setup {
+          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
+        }
       end, 100)
     end,
   },
