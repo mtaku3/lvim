@@ -32,6 +32,8 @@ lvim.plugins = {
   "olexsmir/gopher.nvim",
   "leoluz/nvim-dap-go",
   "mfussenegger/nvim-dap-python",
+  "jose-elias-alvarez/typescript.nvim",
+  "mxsdev/nvim-dap-vscode-js",
   {
     "saecki/crates.nvim",
     tag = "v0.3.0",

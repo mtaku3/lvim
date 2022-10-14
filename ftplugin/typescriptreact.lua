@@ -14,11 +14,17 @@ local opts = {
 
 local mappings = {
   C = {
-    name = "Python",
-    t = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
-    T = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
-    d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },
+    name = "Typescriptreact",
+    i = { "<cmd>TypescriptAddMissingImports<Cr>", "AddMissingImports" },
+    o = { "<cmd>TypescriptOrganizeImports<cr>", "OrganizeImports" },
+    u = { "<cmd>TypescriptRemoveUnused<Cr>", "RemoveUnused" },
+    r = { "<cmd>TypescriptRenameFile<Cr>", "RenameFile" },
+    f = { "<cmd>TypescriptFixAll<Cr>", "FixAll" },
+    g = { "<cmd>TypescriptGoToSourceDefinition<Cr>", "GoToSourceDefinition" },
   },
 }
 
 which_key.register(mappings, opts)
+
+
+
